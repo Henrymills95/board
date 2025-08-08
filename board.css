@@ -1,0 +1,1034 @@
+
+/* Add this to your general styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure header starts at very top */
+.secondary-header {
+    top: 0;
+}
+
+
+
+/* Secondary Header */
+.secondary-header {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: top 0.3s ease;
+}
+
+.secondary-header {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Keep all your existing styles */
+}
+
+.quick-links,
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quick-links a,
+.social-media a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar a {
+    background: #0077cc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 4px 4px 0;
+    text-decoration: none;
+}
+
+.social-media a {
+    width: 30px;
+    height: 30px;
+    background: #ff6600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.main-header {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Keep all your existing styles */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo h2 {
+    color: #004080;
+    font-size: 1.5rem;
+}
+
+/* Desktop Navigation */
+.desktop-menu {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.desktop-menu>li {
+    position: relative;
+}
+
+.desktop-menu a {
+    color: #003366;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.desktop-menu a:hover {
+    background: #f0f8ff;
+}
+
+.desktop-menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.desktop-menu li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+}
+
+.submenu a:hover {
+    background: #e6f2ff;
+    color: #004080;
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #003366;
+    cursor: pointer;
+}
+
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1200;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+}
+
+
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #09549e;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    list-style: none;
+    padding: 20px;
+}
+
+.mobile-nav li {
+    margin-bottom: 10px;
+}
+
+.mobile-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: #003366;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.mobile-nav .submenu-trigger {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.mobile-submenu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 15px;
+}
+
+.mobile-submenu.active {
+    max-height: 1000px;
+}
+
+.mobile-submenu a {
+    padding: 10px 0;
+    color: #555;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 2;
+    visibility: visible;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .logo h2 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .quick-links,
+    .social-media {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner Section */
+.board-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.board-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Add this to your banner section */
+.board-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.board-banner img {
+    width: 100%;
+    min-width: 100%;
+}
+
+.board-banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(247, 241, 241, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .board-banner {
+        height: 350px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .board-banner {
+        height: 300px;
+    }
+
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .board-banner {
+        height: 250px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* *********************board profile************************** */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    flex: 1 1 300px;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-content {
+    flex: 2 1 500px;
+    padding: 30px;
+    position: relative;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.profile-title {
+    font-size: 18px;
+    color: #2826be;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.profile-bio {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.profile-bio-full {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    color: #555;
+}
+
+.profile-bio-full.expanded {
+    max-height: 1000px;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.read-more-btn:hover {
+    color: #2980b9;
+}
+
+.read-more-btn .icon {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.read-more-btn.expanded .icon {
+    transform: rotate(180deg);
+}
+
+/* Alternate layout for even items */
+.profile-container:nth-child(even) .profile-image {
+    order: 2;
+}
+
+.profile-container:nth-child(even) .profile-content {
+    order: 1;
+}
+
+.additional-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.additional-content.expanded {
+    max-height: 1000px;
+    /* Adjust based on your content */
+}
+
+.profile-bio-full {
+    margin-top: 15px;
+}
+
+.profile-bio-full p {
+    margin-bottom: 15px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .profile-image,
+    .profile-content {
+        flex: 1 1 100%;
+    }
+
+    .profile-container:nth-child(even) .profile-image,
+    .profile-container:nth-child(even) .profile-content {
+        order: 0;
+    }
+
+    .profile-image {
+        min-height: 300px;
+    }
+}
+
+/* Animation for the expanded content */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-bio-full.expanded {
+    animation: slideDown 0.9s ease-out;
+}
+
+/* **********************WHY CHOOSE US  ************************* */
+
+.why-choose-us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.content,
+.image-area,
+.progress-area {
+    flex: 1 1 100%;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.progress-area p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+.progress-bar {
+    background: #eee;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #2f63db;
+    transition: width 0.5s ease;
+}
+
+.image-area {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 1.2s ease-in-out;
+}
+
+.image-area img.zoom {
+    transform: scale(1.1);
+}
+
+/* Scroll-in animation */
+.scroll-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+    .why-choose-us {
+        flex-direction: row;
+    }
+
+    .content,
+    .image-area,
+    .progress-area {
+        flex: 1;
+        max-width: 30%;
+    }
+
+    .content {
+        max-width: 35%;
+    }
+
+    .image-area {
+        max-width: 35%;
+    }
+
+    .progress-area {
+        max-width: 30%;
+    }
+}
+
+/* **********************FOOTER************************* */
+.footer-area {
+    margin-top: 100px;
+    padding: 100px 0;
+    background: #062f68;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 100px 0;
+    color: #fff;
+    position: relative;
+    text-align: left;
+    /* Center align content for smaller screens */
+}
+
+.main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.single-footer {
+    width: 230px;
+}
+
+.single-footer:first-child {
+    width: 400px;
+}
+
+.single-footer h4 {
+
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+.footer-social a {
+    color: #fff;
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.single-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.single-footer ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.single-footer ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    /* Add this line */
+    padding-left: 20px;
+    /* Add this to make space for the icon */
+}
+
+.single-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the powered by text */
+.copy .powered-by {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.copy .powered-by a {
+    color: #ffab00;
+    /* Customize the link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.copy .powered-by a:hover {
+    color: #f39c12;
+    /* Hover effect color */
+}
+
+.copy {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 50px;
+}
+
+/* Center the school logo */
+.logo-footer {
+    width: 230px;
+    /* Same width as other sections */
+    text-align: center;
+    margin: 0 auto;
+    /* Centers the logo horizontally */
+}
+
+.footer-logo {
+    max-width: 180px;
+    /* Adjust the size if needed */
+    width: 100%;
+    height: auto;
+}
+
+/* Center the social media icons */
+.footer-social-container {
+    display: flex;
+    justify-content: center;
+    /* Center the social media icons */
+    align-items: center;
+    margin-top: 30px;
+    /* Add margin for spacing if needed */
+}
+
+.footer-social {
+    text-align: center;
+    /* Ensures social icons are centered inside the container */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 992px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        /* Center all footer content */
+    }
+
+    .single-footer {
+        width: 100%;
+        text-align: left;
+        /* Center the text on mobile */
+    }
+
+    /* Center the logo and social icons on mobile */
+    .logo-footer,
+    .footer-social-container {
+        width: 100%;
+        /* Take full width on mobile */
+        text-align: center;
+        /* Align content to the center */
+    }
+
+    .footer-logo {
+        max-width: 150px;
+        /* Make logo smaller on mobile */
+    }
+
+    .footer-social a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    /* Shift h4 to the right on mobile */
+    .single-footer h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        padding-left: 50px;
+        /* Add padding to shift h4 slightly to the right */
+        text-align: left;
+        /* Ensure text aligns left */
+    }
+}
+
+
+/* Optional: Logo size adjustment for smaller screens */
+@media (max-width: 576px) {
+    .footer-logo {
+        max-width: 120px;
+        /* Even smaller logo on extra small screens */
+    }
+}
+
+/* Style for the logo image with a round circle */
+.logo-footer img {
+    width: 150px;
+    /* Adjust the size of the logo */
+    height: 150px;
+    /* Keep the height equal to width for a perfect circle */
+    object-fit: cover;
+    /* Ensure the image fits within the circle */
+    border-radius: 50%;
+    /* Creates the circular shape */
+    border: 5px solid #fff;
+    /* Add a white border around the logo */
+    padding: 10px;
+    /* Optional: Adds space between the logo and the border */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the logo */
+.logo-footer img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the logo on hover */
+    border-color: #ffab00;
+    /* Change border color on hover (you can customize the color) */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 992px) {
+    .logo-footer img {
+        width: 120px;
+        /* Adjust logo size for mobile */
+        height: 120px;
+        /* Keep it square for a perfect circle */
+        padding: 8px;
+        /* Adjust padding for mobile */
+    }
+
+    .footer-social-container {
+        flex-direction: column;
+        /* Stack the social icons vertically on mobile */
+        margin-top: 15px;
+        /* Add space between logo and icons */
+    }
+
+    .footer-social a {
+        width: 35px;
+        /* Adjust icon size */
+        height: 35px;
+        line-height: 35px;
+    }
+}
+
+/* Style for Scroll-to-Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+}

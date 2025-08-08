@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPCS</title>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon-1.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+
+    <!-- Secondary Header -->
+    <div class="secondary-header" id="secondaryHeader">
+        <div class="quick-links">
+            <a href="mailto:motherprovidenciasch@gmail.com"><i class="fas fa-envelope"></i>
+                motherprovidenciasch@gmail.com</a>
+            <a href="tel:+233207563043"><i class="fas fa-phone"></i> 0207563043</a>
+            <a href="tel:+233551111186"><i class="fas fa-phone"></i> 0551111186</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Adenta, New Legon(Rosa - Rosa)</a>
+            <a href="#"><i class="fas fa-clock"></i> 8:00am - 4:00pm (Mon-Fri)</a>
+        </div>
+        <div class="social-media">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <a href="#" id="searchLink"><i class="fas fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="logo">
+            <img src="img/mlogo.png" alt="School Logo">
+            <h2>Mother Providencia Catholic School</h2>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="../home/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                    <ul class="submenu">
+                        <li><a href="../head/head.html">Headmistress Message</a></li>
+                        <li><a href="../about us/about.html">Our History</a></li>
+                        <li><a href="../board/board.html">School Management</a></li>
+                        <li><a href="../student/std.html">Student Leadership</a></li>
+                        <li><a href="../School anthem/anthem.html">School Anthem/Hymn</a></li>
+                        <li><a href="../Hall-of-fame/hall-of-fame.html">Alumni / Hall Of Fame</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-book"></i> Academics</a>
+                    <ul class="submenu">
+                        <li><a href="../Academics/curriculum.html">Curriculum</a></li>
+                        <li><a href="../staff/staff.html">Staff / Department</a></li>
+                        <li><a href="../Academics/presch/presch.html">Pre-School</a></li>
+                        <li><a href="../Academics/primary/primary.html">Primary</a></li>
+                        <li><a href="../Academics/jhs/jhs.html">JHS</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-newspaper"></i> News & Events +</a>
+                    <ul class="submenu">
+                        <li><a href="../latest news/latest1.html">News and Updates</a></li>
+                        <li><a href="#">Archived News</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-user"></i> Admissions +</a>
+                    <ul class="submenu">
+                        <li><a href="../admission/admission.html">Admission Procedure</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="../pta/facility.html"><i class="fas fa-school"></i> Facilities </a>
+                </li>
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-heart"></i> Activities +</a>
+                    <ul class="submenu">
+                        <li><a href="/Activities/activities.html">Spiritual & Social Guidance</a></li>
+                    </ul>
+
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-image"></i> Gallery</a>
+                    <ul class="submenu">
+                        <li><a href="../gallery/gallery.html">Photo Gallery</a></li>
+                        <li><a href="../gallery/gallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="img/mlogo.png" alt="School Logo" height="50">
+            <h2>Mother Providencia Catholic School</h2>
+            <button class="close-menu-btn" id="closeMenuBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-nav">
+            <li>
+                <a href="../home/index.html">
+                    <span><i class="fas fa-home"></i> Home</span>
+                </a>
+            </li>
+
+            <li class="has-submenu">
+                <a href="#">
+                    <span><i class="fas fa-info-circle"></i> About Us</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="../head/head.html">Headmistress Message</a></li>
+                    <li><a href="../about us/about.html">Our History</a></li>
+                    <li><a href="../board/board.html">School Management</a></li>
+                    <li><a href="../student/std.html">Student Leadership</a></li>
+                    <li><a href="../School anthem/anthem.html">School Anthem/Hymn</a></li>
+                    <li><a href="../Hall-of-fame/hall-of-fame.html">Alumni / Hall Of Fame</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <a href="#">
+                    <span><i class="fas fa-book"></i> Academics</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="../Academics/curriculum.html">Curriculum</a></li>
+                    <li><a href="../staff/staff.html">Staff / Department</a></li>
+                    <li><a href="../Academics/presch/presch.html">Pre-School</a></li>
+                    <li><a href="../Academics/primary/primary.html">Primary</a></li>
+                    <li><a href="../Academics/jhs/jhs.html">JHS</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <a href="/latest news/latest1.html">
+                    <span><i class="fas fa-newspaper"></i> News & Events</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="/latest news/latest1.html">News and Updates</a></li>
+                    <li><a href="#">Archived News</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="/admission/admission.html">
+                    <span><i class="fas fa-user"></i> Admissions</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="/admission/admission.html">Admission Procedure</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <a href="/pta/facility.html">
+                    <span><i class="fas fa-user"></i> Facilities</span>
+                </a>
+            </li>
+
+            <li class="has-submenu">
+                <a href="/Activities/activities.html">
+                    <span><i class="fas fa-heart"></i> Activities</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="../Activities/activities.html">Spiritual & Social Guidance</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <a href="#">
+                    <span><i class="fas fa-image"></i> Gallery</span>
+                    <span class="submenu-trigger"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <ul class="mobile-submenu">
+                    <li><a href="../gallery/gallery.html">Photo Gallery</a></li>
+                    <li><a href="#"><Video> Gallery</Video></a></li>
+                </ul>
+            </li>
+            <li><a href="../contact/contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const submenuTriggers = document.querySelectorAll('.submenu-trigger');
+
+            // Toggle mobile menu
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Toggle submenus
+            submenuTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const submenu = this.parentElement.nextElementSibling;
+                    const icon = this.querySelector('i');
+
+                    submenu.classList.toggle('active');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+
+            // Swipe to close functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            mobileMenu.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+
+            mobileMenu.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchStartX - touchEndX > 100) {
+                    toggleMobileMenu();
+                }
+            }, false);
+
+            // Event listeners
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            closeMenuBtn.addEventListener('click', toggleMobileMenu);
+            menuOverlay.addEventListener('click', toggleMobileMenu);
+
+            // Sticky header
+            window.addEventListener('scroll', function () {
+                const secondaryHeader = document.getElementById('secondaryHeader');
+                const mainHeader = document.getElementById('mainHeader');
+
+                if (window.scrollY > 100) {
+                    secondaryHeader.style.top = '-50px';
+                    mainHeader.classList.add('fixed');
+                } else {
+                    secondaryHeader.style.top = '0';
+                    mainHeader.classList.remove('fixed');
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <!-- Board of Directors Banner Section -->
+    <section class="board-banner">
+        <!-- Replace with your actual image path -->
+        <img src="img/board.jpg" alt="Board of Directors Banner">
+
+        <div class="banner-content">
+            <h1>Board of Directors</h1>
+            <p>Below is a list of MPCS Board of Directors</p>
+
+            <div class="breadcrumb">
+                <a href="../home/index.html">Home</a>
+                <span>/</span>
+                <a href="../about us/about.html">About Us</a>
+                <span>/</span>
+                <a href="../student/std.html">Student Leadership </a>
+            </div>
+        </div>
+    </section>
+
+
+    <div style="background-color: #3610a0; padding: 10px;">
+        <marquee scrollamount="5" width="100%" style="color: white;">
+            “Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            📅 2025 Admissions Now Open! Enroll Today and Join the Journey of Excellence.
+        </marquee>
+    </div>
+
+
+    <div class="container">
+        <h1>Board of Directors</h1>
+
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/superior.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">SR. REGINA IGNATIA AFLAH, ESQ.</h2>
+                <p class="profile-title">Vice Superior General (Handmaids of the Divine Redeemer, Accra)</p>
+
+                <div class="profile-bio">
+                    Sr. Regina Ignatia Aflah is a civil lawyer and a highly enthusiastic and resourceful professional.
+                    Sr. Aflah currently works as the Executive Director for the Handmaids of the Divine Redeemer Sisters
+                    Foundation (HDRSF) and the Vice Superior General of the Handmaids of the Divine Redeemer of Accra, a
+                    diocesan religious congregation in Accra founded by the late Bishop Joseph Oliver Bowers.
+                    <p>Sr. Aflah
+                        is a member of the Caritas Internationalis Legal Affairs Commission.</p>
+                </div>
+
+                <div class="profile-bio-full">
+                    Sr. Aflah is a PhD (Candidate) in International Law and Treaty Law with EUCLID University, USA. <p>
+                        She also holds the following qualifications;
+                    </p> Graduate Diploma in Legal Practice- Institute of Legal
+                    Practice and Development, Rwanda, Master of Laws (LL.M) Human Rights Law, University of London</p>
+                    <p> Postgraduate Diploma in Public International Law, University of London, Postgraduate Certificate
+                        inMedical Law and Ethics, University of London.</p>
+                    </p> Master of Business Administration
+                    (EMBA) Ghana Institute of Management and Public Administration (GIMPA).</p>
+                    <p>Bachelor of Laws (LLB), Mountcrest University College, Ghana.</p>
+                    Bachelor in Information Communication and Technology, Ghana Institute
+                    of Management and Public Administration (GIMPA).</p>
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Second Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/logo.jpg')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">MR. </h2>
+                <p class="profile-title">Board Chairman</p>
+                <div class="profile-bio">
+                    Brief introduction about Board chairs here. This would be the visible part before
+                    clicking "Read More".
+                </div>
+                <div class="profile-bio-full">
+                    Full details about Board chairswould appear here when "Read More" is clicked. This
+                    could include his career history, achievements, education background, and other relevant
+                    information.
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Third Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/vero.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">MRS VERONICA AMA JACKSON</h2>
+                <p class="profile-title">Vice Board Chairperson</p>
+                <div class="profile-bio">
+                    Attended St Michael’s Primary and Middle schools and University Primary School all in Cape Coast.
+                    (1961-1968).
+                    Went to Wesley Girls’ High School in Cape Coast for Secondary education (1969 – 1974).
+                    Attended Wesley College in Kumasi for Post -Secondary Education (1974- 1976).
+
+                </div>
+                <div class="profile-bio-full">
+                    <p>Trained as a
+                        professional teacher and taught at the Basic level of education- Primary & Middle (1976-1977)
+                    </p>
+
+                    Trained in Home Economics at the Specialist Training College, Winneba (1977-1980) and taught at Holy
+                    Child School, Cape Coast (1980 – 1982)
+                    <p> Worked in District Education Offices within Ghana Education Service. (1988 – 1991).</p>
+                    <p>Attended University of Ghana, Legon (1991-1994). Dept of Home Science (Economics)</p>
+                    <p>A professional Home Economist who worked at the Ghana Education Service Headquarters for sixteen
+                        years (1996 – 2012) in various positions.</p>
+                    <p>Appointed Municipal Director of Education for Tarkwa- Nsuaem Municipality (2012- 2016)
+                        Retired from active service in April 2016. Have a son and two daughters.</p>
+
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fouth Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/mary.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">REV. SR. MARYJOE OCANSEY</h2>
+                <p class="profile-title">Headteacher</p>
+                <div class="profile-bio">
+                    Sr Josephine Ocansey is a professional trained teacher. She attended Mount Mary Training College,
+                    now Mount Mary College of Education.
+                </div>
+                <div class="profile-bio-full">
+                    She holds a Bachelor of Degree in Basic Education at the University of Education Winneba. She has
+                    worked with education service for thirty four years now. Currently at Mother Providencia Catholic
+                    school as the headteacher.
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- fifth Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/sarah.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">MISS SARAH AGYEKUM</h2>
+                <p class="profile-title"> Board Secretary</p>
+                <div class="profile-bio">
+                    Sarah Agyekum is an experienced tutor with nine years teaching experience. She currently teaches
+                    English Language at Mother Providencia Catholic School.
+
+                    She had her Primary education at Base Workshop Basic School, Burma Camp through to Sakumono
+                    School Complex for her Junior Secondary School education.
+
+                    She is a proud product of St. Louis Senior High School, Oduom - Kumasi.
+                </div>
+                <div class="profile-bio-full">
+                    She is a trained journalist and holds a B.A. in Communication Studies with specialisation in
+                    Journalism from the Ghana Institute of Journalism (GIJ), now University of Media, Arts and
+                    Communications (UniMAC).
+
+                    She also has a certificate in Montessori Jolly Phonics Training from the Ghana Montessori
+                    Council.
+
+                    Her love for teaching began during her university and National Service days. She adores children
+                    and always wishes to see them excel in their academics.
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- sixth Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/5.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">MR. PATRICK AMOAH SARFO</h2>
+                <p class="profile-title">PTA Chairman/Board Member </p>
+                <div class="profile-bio">
+                    Patrick Amoah Sarfo is a seasoned Internal Auditor with the Ghana Civil Aviation Authority (GCAA),
+                    bringing over a decade of progressive experience in accounting, auditing, logistics and enterprise
+                    risk management.
+
+                </div>
+                <div class="profile-bio-full">
+                    He holds a Master of Science (MSc) in Accounting and Finance from the Kwame Nkrumah University of
+                    Science and Technology (KNUST) and a Bachelor of Science (BSc) in Accounting from the University of
+                    Professional Studies, Accra (UPSA).
+                    <p>He also attended St. Peters Boys Senior Secondary School,Nkwatia.</p>
+
+                    <p>He is married with three beautiful children.</p>
+                </div>
+
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- seventh Profile -->
+        <div class="profile-container">
+            <div class="profile-image" style="background-image: url('img/araba.png')"></div>
+            <div class="profile-content">
+                <h2 class="profile-name">MRS MARISKA ARABA TAYLOR-DARKO </h2>
+                <p class="profile-title"> Board Member</p>
+                <div class="profile-bio">
+                    Mariska Araba Taylor-Darko attended Christ the King Int School, Holy Child Sec. School, Cape Coast
+                    and St. Mary’s Sec. School, Korle-Gonno, Accra. She also attended Beresford College of English in
+                    Kent and Harrow College of Further Education both in the UK.
+                </div>
+                <div class="profile-bio-full">
+                    She trained as a Legal Secretary and a Beautician/Hairdresser. She is a published Author of
+                    Children’s books.
+                    <p>She was a past executive of the Ghana Association of Writers. She is a mother of
+                        two sons and former Director of Ghana Organisation for Learning and Development, a UK based NGO.
+                    </p>
+                </div>
+                <button class="read-more-btn">
+                    READ MORE
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const additionalContent = this.previousElementSibling;
+                    this.classList.toggle('expanded');
+                    additionalContent.classList.toggle('expanded');
+
+                    // Change button text
+                    if (this.classList.contains('expanded')) {
+                        this.innerHTML = 'READ LESS <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    } else {
+                        this.innerHTML = 'READ MORE <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+    <!-- WHY CHOSE USE  -->
+    <section class="why-choose-us scroll-in" id="why-choose-us">
+        <div class="content">
+            <h2>Why choose us</h2>
+            <p>
+                We are a school that provides a holistic and nurturing environment for learners of all ages,
+                from crèche to JHS. We are committed to providing high-quality education that will help your
+                child reach their full potential.
+            </p>
+        </div>
+
+        <div class="image-area">
+            <img id="slideshow-image" src="img/meeting-04.png" alt="Why Choose Us">
+        </div>
+
+        <div class="progress-area">
+            <p><strong>Comprehensive Education</strong><span>100%</span></p>
+            <div class="progress-bar">
+                <div class="bar-fill"></div>
+            </div>
+
+            <p><strong>Experienced and Dedicated Facilitators</strong><span>100%</span></p>
+            <div class="progress-bar">
+                <div class="bar-fill"></div>
+            </div>
+
+            <p><strong>Holistic Development</strong><span>100%</span></p>
+            <div class="progress-bar">
+                <div class="bar-fill"></div>
+            </div>
+
+            <p><strong>Supportive Learning Environment</strong><span>100%</span></p>
+            <div class="progress-bar">
+                <div class="bar-fill"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOSE USE  -->
+    <script>
+        const images = [
+            'img/meeting-01.PNG',
+            'img/meeting-02.PNG',
+            'img/meeting-03.PNG',
+            'img/meeting-04.PNG'
+        ];
+
+        let index = 0;
+        const imageElement = document.getElementById('slideshow-image');
+
+        setInterval(() => {
+            imageElement.classList.add('zoom'); // Trigger zoom
+
+            setTimeout(() => {
+                index = (index + 1) % images.length;
+                imageElement.src = images[index];
+                imageElement.classList.remove('zoom'); // Reset zoom
+            }, 800); // Change image before next zoom ends
+        }, 4000);
+    </script>
+    <script>
+        // Scroll-in animation script
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.scroll-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+
+
+
+
+    <!-- FOOTER  -->
+    <footer class="footer-area">
+        <div class="footer-wave-box">
+            <div class="footer-wave footer-animation"></div>
+        </div>
+        <div class="main">
+            <div class="footer">
+
+                <div class="single-footer logo-footer">
+                    <img src="img/logo.jpg" alt="School Logo" class="footer-logo">
+                    <!-- replace img path and filename accordingly -->
+
+                    <div class="single-footer footer-social-container">
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/share/p/1AdYZXeDPi/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://youtu.be/nnHn_wD_W-M"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-footer">
+                    <h4>Main Menu</h4>
+                    <ul>
+                        <li><a href="../home/index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="../about us/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="../admission/admission.html"><i class="fas fa-chevron-right"></i> Admission</a>
+                        </li>
+                        <li><a href="../gallery/gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="../pta/facility.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="single-footer">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../latest news/latest1.html"><i class="fas fa-chevron-right"></i> News &
+                                Updates</a></li>
+                        <li><a href="../Academics/presch/presch.html"><i class="fas fa-chevron-right"></i>
+                                Pre-School</a></li>
+                        <li><a href="../Academics/primary/primary.html"><i class="fas fa-chevron-right"></i> Primary</a>
+                        </li>
+                        <li><a href="../Academics/jhs/jhs.html"><i class="fas fa-chevron-right"></i> JHS</a></li>
+                        <li><a href="../about us/about.html"><i class="fas fa-chevron-right"></i> Our History</a></li>
+                    </ul>
+                </div>
+
+                <div class="single-footer">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="../contact/contact.html"><i class="fas fa-map-marker-alt"></i> Adenta, New Legon
+                                (Rosa - Rosa)</a></li>
+                        <li><a href="tel:0207563043"><i class="fas fa-mobile-alt"></i> 0207563043</a></li>
+                        <li><a href="tel:0551111186"><i class="fas fa-mobile-alt"></i> 0551111186</a></li>
+                        <li><a href="mailto:motherprovidenciasch@gmail.com"><i class="far fa-envelope"></i>
+                                motherprovidenciasch@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copy">
+                <p>&copy; 2025 All Rights Reserved</p>
+                <p class="powered-by">Powered by <a href="https://innovexlabs.com" target="_blank">InnovexLabs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- RESPONSIVE MENU -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+            const submenuParents = document.querySelectorAll(".has-submenu > a");
+
+            // Toggle menu for mobile view
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+                document.body.classList.toggle("menu-open");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.remove("active");
+                    document.body.classList.remove("menu-open");
+                }
+            });
+
+            // Toggle submenus on mobile
+            submenuParents.forEach(parent => {
+                parent.addEventListener("click", function (event) {
+                    if (window.innerWidth <= 768) {  // Only for mobile
+                        event.preventDefault();
+                        this.nextElementSibling.classList.toggle("submenu-active");
+                    }
+                });
+            });
+
+            // Sticky header with secondary header hide/show
+            window.addEventListener("scroll", function () {
+                const secondaryHeader = document.getElementById("secondaryHeader");
+                const mainHeader = document.getElementById("mainHeader");
+
+                if (window.scrollY > 100) {
+                    secondaryHeader.style.top = "-50px";
+                    mainHeader.classList.add("fixed");
+                } else {
+                    secondaryHeader.style.top = "0";
+                    mainHeader.classList.remove("fixed");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function openMenu() {
+            document.querySelector(".mobile-menu").classList.add("active");
+        }
+
+        function closeMenu() {
+            document.querySelector(".mobile-menu").classList.remove("active");
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            let submenu = event.target.nextElementSibling;
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
+
+
+
+    <!-- SCRIPT FOR SEARCH ON SITE     -->
+    <script>
+        document.getElementById("searchLink").addEventListener("click", function (e) {
+            e.preventDefault(); // Stop default link behavior
+
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const allLinks = document.querySelectorAll("nav a");
+
+            for (let link of allLinks) {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(input) && input !== "") {
+                    // Open the first matched link in a new page
+                    window.location.href = link.getAttribute("href");
+                    return;
+                }
+            }
+
+            // If no match found
+            alert("No matching page found.");
+        });
+    </script>
+
+
+    <!-- Scrolling button -->
+    <button id="scrollTopBtn">&#8679;</button>
+
+    <!-- BOTTOM SCROLLING BUTTON Section -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+            // Debugging: Log if button is found
+            if (scrollTopBtn) {
+                console.log("Scroll-to-Top button found.");
+            } else {
+                console.error("Scroll-to-Top button NOT found!");
+            }
+
+            // Show button when scrolling
+            window.onscroll = function () {
+                console.log("Scrolling..."); // Debugging log
+
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    console.log("Showing button");
+                    scrollTopBtn.style.display = "block";
+                } else {
+                    console.log("Hiding button");
+                    scrollTopBtn.style.display = "none";
+                }
+            };
+
+            // Scroll to top on button click
+            scrollTopBtn.addEventListener("click", function () {
+                console.log("Button clicked - scrolling to top.");
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+
+    <!-- ICON FOR SCROLLING BACK TO TOP -->
+    <button id="scrollTopBtn">&#8679;</button>
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
